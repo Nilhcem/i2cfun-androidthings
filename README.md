@@ -1,8 +1,8 @@
 # Android Things I²C fun
 
-I²C communication sample between an Android Things (Raspberry Pi 3) master and an Arduino slave.
+I²C communication sample between an Android Things (Raspberry Pi 3) master and multiple slaves.
 
-Blog post: [http://nilhcem.com/android-things/arduino-as-an-i2c-slave][blog-post]
+Blog post: [http://nilhcem.com/android-things/chaining-i2c-devices][blog-post]
 
 
 ## Arduino sketch
@@ -16,6 +16,8 @@ Arduino sketch is located in the `arduino` folder
 - PN2222 transistor
 - 1N4007 diode
 - 220Ω resistor
+- LCD 1602 with PCF8574 I2C adapter
+- SSD1306
 
 
 ## Schematic
@@ -39,5 +41,5 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[schematic]: https://raw.githubusercontent.com/Nilhcem/i2cfun-androidthings/master/assets/schematic_arduino.png
+[schematic]: https://raw.githubusercontent.com/Nilhcem/i2cfun-androidthings/master/assets/schematic_chain.png
 [blog-post]: http://nilhcem.com/android-things/arduino-as-an-i2c-slave
