@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import com.google.android.things.contrib.driver.ssd1306.Ssd1306
-import com.google.android.things.pio.PeripheralManagerService
+import com.google.android.things.pio.PeripheralManager
 import com.nilhcem.androidthings.driver.lcdpcf8574.LcdPcf8574
 import com.nilhcem.androidthings.i2cfun.core.ext.scanI2cAvailableAddresses
 import com.nilhcem.androidthings.i2cfun.device.components.ArduinoFanI2C
@@ -66,7 +66,7 @@ class MainActivity : Activity() {
 
     private fun scanI2cDevices() {
         Log.i(TAG, "Scanning I2C devices")
-        PeripheralManagerService().scanI2cAvailableAddresses(I2C_PIN_NAME)
+        PeripheralManager.getInstance().scanI2cAvailableAddresses(I2C_PIN_NAME)
                 .map { String.format(Locale.US, "0x%02X", it) }
                 .forEach { address -> Log.i(TAG, "Found: $address") }
     }

@@ -1,7 +1,7 @@
 package com.nilhcem.androidthings.i2cfun.device.components
 
 import com.google.android.things.pio.I2cDevice
-import com.google.android.things.pio.PeripheralManagerService
+import com.google.android.things.pio.PeripheralManager
 import com.nilhcem.androidthings.i2cfun.core.ext.toPositiveInt
 
 class ArduinoFanI2C(i2cName: String, i2cAddress: Int) : AutoCloseable {
@@ -25,7 +25,7 @@ class ArduinoFanI2C(i2cName: String, i2cAddress: Int) : AutoCloseable {
     private var device: I2cDevice? = null
 
     init {
-        device = PeripheralManagerService().openI2cDevice(i2cName, i2cAddress)
+        device = PeripheralManager.getInstance().openI2cDevice(i2cName, i2cAddress)
     }
 
     var speed: Speed
