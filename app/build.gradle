@@ -22,8 +22,8 @@ android {
 }
 
 dependencies {
-    compileOnly 'com.google.android.things:androidthings:0.7-devpreview'
+    compileOnly 'com.google.android.things:androidthings:1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.google.android.things.contrib:driver-ssd1306:0.6'
-    implementation 'com.nilhcem.androidthings:driver-lcd-pcf8574:0.0.2'
+    implementation 'com.google.android.things.contrib:driver-ssd1306:1.0'
+    implementation 'com.nilhcem.androidthings:driver-lcd-pcf8574:0.0.3'
 }
